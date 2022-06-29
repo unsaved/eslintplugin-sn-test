@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/unsaved/eslint-plugin-sn#readme",
   "dependencies": {
-    "@admc.com/eslint-plugin-sn": "^1.0.0"
+    "@admc.com/eslint-plugin-sn": "^1.0.0",
+    "mocha": "^10.0.0"
   }
 }
