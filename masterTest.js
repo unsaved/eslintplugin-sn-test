@@ -14,7 +14,7 @@ if (!fs.statSync(scriptPath).isFile()) throw new Error(`Script is not a file: ${
 const params = [ "node_modules/.bin/snLint", scriptPath ];
 if (altscope) params.splice(1, 0, "-a", altscope);
 if (process.env.DEBUG) {
-    if (altscope) params.splice(1, 0, "-d");
+    params.splice(1, 0, "-d");
     console.debug("Lint params:", params);
 }
 const childProcess = require("child_process").
