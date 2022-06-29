@@ -1,5 +1,5 @@
 {
-  "name": "eslintplugin-sn-test",
+  "name": "@admc.com/eslintplugin-sn-test",
   "version": "1.0.0",
   "description": "External tests for ESLint plugin @admc.com/eslint-plugin-sn",
   "scripts": {
