@@ -20,7 +20,7 @@ if (process.env.DEBUG) {
 const childProcess = require("child_process").
   spawnSync(process.execPath, params, { stdio: "inherit" });
 
-it(tableBase, () => {
+it(altscope ? `${tableBase} | ${altscope}` : tableBase, () => {
     if ((shouldSucceed && childProcess.status !== 0)
       || (!shouldSucceed && childProcess.status === 0))
         throw new Error(`Failed with code ${childProcess.status}`);
