@@ -7,7 +7,7 @@
     "test1": "DEBUG=true mocha",
     "snLint": "snLint -d",
     "setup": "snLint -g . && populateTest.bash -v",
-    "lint": "eslint --ext .js ."
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/unsaved/eslint-plugin-sn#readme",
   "dependencies": {
-    "@admc.com/eslint-plugin-sn": "^1.0.0",
+    "@admc.com/eslint-plugin-sn": "^1.0.1",
     "mocha": "^10.0.0"
   }
 }
