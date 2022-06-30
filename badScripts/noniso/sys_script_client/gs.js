@@ -1,1 +1,1 @@
-console.log(gs.getUserName());
+console.info(gs.getUserName());

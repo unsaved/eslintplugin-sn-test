@@ -6,7 +6,7 @@
     "test": "mocha --recursive",
     "test1": "DEBUG=true mocha",
     "snLint": "snLint -d",
-    "setup": "snLint -s . &&  snLint -g . && populateTest.bash -v"
+    "setup": "snLint -g . && populateTest.bash -v"
   },
   "repository": {
     "type": "git",
