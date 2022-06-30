@@ -4,6 +4,7 @@
   "env": { "es2022": true, "node": true },
   "extends": "eslint:recommended",
   "parserOptions": { "ecmaVersion": "latest" },
+  "ignorePatterns": ["goodScripts/**", "badScripts/**", "test/**"],
   "rules": {
     "camelcase": "warn",
     "eqeqeq": "error",
@@ -71,7 +72,7 @@
     "keyword-spacing": "error",
     "linebreak-style": "error",
     "max-len": ["error", { "code": 100, "ignoreUrls": true }],
-    "no-multi-spaces": "error",
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
     "no-tabs": "error",
     "no-trailing-spaces": "error",
     "no-whitespace-before-property": "error",
