@@ -17,7 +17,7 @@
     "no-array-constructor": "error",
     "max-depth": "error",
     "dot-notation": "error",
-    "camelcase": "error",
+    "camelcase": ["error", { "properties": "never" }],
     "no-template-curly-in-string": "error",
     "eqeqeq": "error",
     "semi": "error",
@@ -25,6 +25,11 @@
   },
   "overrides": [
     {
+      "files": ["**/@(sa_pattern_prepost_script|sys_script_fix|sys_script|sys_script_include|sys_auto_script|sys_ws_operation|sys_web_service)/@(global|scoped)/*.js"],
+      "rules": {
+        "camelcase": ["error", { "properties": "never", "ignoreGlobals": true }]
+      }
+    },{ // ES6 overrides
       "files": ["**/@(sys|catalog|expert)_script_client/@(noniso|iso)/*.js"],
       "rules": {
         "strict": ["error", "safe"],

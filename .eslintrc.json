@@ -6,7 +6,7 @@
   "parserOptions": { "ecmaVersion": "latest" },
   "ignorePatterns": ["goodScripts/**", "badScripts/**", "test/**"],
   "rules": {
-    "camelcase": "warn",
+    "camelcase": ["warn", { "properties": "never" }],
     "eqeqeq": "error",
     "semi": "error",
     "no-unreachable-loop": "error",
