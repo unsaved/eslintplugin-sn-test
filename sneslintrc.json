@@ -21,7 +21,8 @@
     "no-template-curly-in-string": "error",
     "eqeqeq": "error",
     "semi": "error",
-    "no-extra-parens": "error"
+    "no-extra-parens": "error",
+    "@admc.com/sn/prefer-array-iterator": "error"
   },
   "overrides": [
     {
