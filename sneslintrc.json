@@ -22,7 +22,8 @@
     "eqeqeq": "error",
     "semi": "error",
     "no-extra-parens": "error",
-    "@admc.com/sn/prefer-array-iterator": "error"
+    "@admc.com/sn/prefer-array-iterator": "error",
+    "@admc.com/sn/no-init-emptystring": "error"
   },
   "overrides": [
     {
