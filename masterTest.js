@@ -5,7 +5,7 @@ if (!__filename.startsWith(process.cwd() + "/"))  // eslint-disable-line prefer-
 const relTestPath = __filename.substring(process.cwd().length + 1);
 const path = require("path");
 const fs = require("fs");
-const ex = /^test[/](good|bad)[/](?:(\w+)[/])?(\w+[/]\w+)-test[.]js$/.exec(relTestPath);
+const ex = /^test[/](good|bad)[/](?:(\w+)[/])?([\w.]+[/]\w+)-test[.]js$/.exec(relTestPath);
 if (!ex) throw new Error(`Bad test file path: ${relTestPath}`);
 const shouldSucceed = ex[1] === "good";
 const altscope = ex[2];
