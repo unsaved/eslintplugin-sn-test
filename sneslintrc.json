@@ -35,10 +35,7 @@
         "camelcase": ["error", { "properties": "never", "ignoreGlobals": true }]
       }
     },{ // ES6 overrides
-      "files": [
-        "**/@(noniso|iso)/*.js",
-        "**/sys_ui_script/*.js"
-      ],
+      "files": [ "**/@(noniso|iso)/*.js" ],
       "rules": {
         "strict": ["error", "safe"],
         "prefer-arrow-callback": "error",
@@ -46,6 +43,14 @@
         "no-useless-rename": "error",
         "no-var": "error",
         "prefer-template": "error"
+      },
+      "files": [ "**/sys_ui_script/*.js" ],
+      "rules": {
+        "strict": ["error", "safe"],
+        "prefer-arrow-callback": "error",
+        "object-shorthand": "error",
+        "no-useless-rename": "error",
+        "no-var": "error"
       }
     }
   ]

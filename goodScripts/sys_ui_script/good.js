@@ -1,2 +1,2 @@
 const msg = "a ok";
-console.info(msg);
+console.info(msg + " now");
