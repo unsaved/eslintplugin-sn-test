@@ -1,6 +1,6 @@
 {
   "name": "@admc.com/eslintplugin-sn-test",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "External tests for ESLint plugin @admc.com/eslint-plugin-sn",
   "scripts": {
     "test": "mocha --recursive",
