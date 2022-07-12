@@ -1,1 +1,2 @@
-console.info("a ok");
+const msg = "a ok";
+console.info(msg);
