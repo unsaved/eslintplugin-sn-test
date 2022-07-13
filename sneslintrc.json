@@ -17,7 +17,7 @@
     "no-array-constructor": "error",
     "max-depth": "error",
     "dot-notation": "error",
-    "camelcase": ["error", { "properties": "never" }],
+    "camelcase": ["error", { "properties": "never", "ignoreGlobals": true }],
     "no-template-curly-in-string": "error",
     "eqeqeq": "error",
     "semi": "error",
@@ -30,10 +30,7 @@
       "files": [
         "**//@(global|scoped)/*.js",
         "**/sys_ui_action/@(iso|noniso)_@(global|scoped)action/*.js"
-      ],
-      "rules": {
-        "camelcase": ["error", { "properties": "never", "ignoreGlobals": true }]
-      }
+      ]
     },{ // ES6 overrides
       "files": [ "**/@(noniso|iso)/*.js" ],
       "rules": {
