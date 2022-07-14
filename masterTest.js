@@ -14,7 +14,7 @@ const tableBase = ex[3];
 const scriptPath = path.join(`${ex[1]}Scripts`, `${altscope?(altscope+"/"):""}${tableBase}.js`);
 if (!fs.existsSync(scriptPath)) throw new Error(`Script file missing: ${scriptPath}`);
 if (!fs.statSync(scriptPath).isFile()) throw new Error(`Script is not a file: ${scriptPath}`);
-const params = [ "node_modules/.bin/snLint", scriptPath ];
+const params = [ "node_modules/.bin/snLint", scriptPath, "-c" ];
 if (altscope) params.splice(1, 0, "-a", altscope);
 if (process.env.DEBUG) {
     params.splice(1, 0, "-d");
@@ -25,6 +25,6 @@ const childProcess = require("child_process").
 
 it(altscope ? `${tableBase} | ${altscope}` : tableBase, () => {
     if (shouldSucceed && childProcess.status !== 0
-      || !shouldSucceed && childProcess.status === 0)
+      || !shouldSucceed && childProcess.status !== 1)
         throw new Error(`Failed with code ${childProcess.status}`);
 });
