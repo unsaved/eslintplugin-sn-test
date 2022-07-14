@@ -49,6 +49,18 @@
         "no-useless-rename": "error",
         "no-var": "error"
       }
+    }, { // Custom table and scope
+      "files": [ "**/custom_table/custalt/*.js" ],
+      "env": {"@admc.com/sn/sn_server_global": true },
+      "rules": {
+         "@admc.com/sn/invalid-table-altscope": "off",
+         "@admc.com/sn/log-global-2-args": "error",
+         "@admc.com/sn/no-log-scoped": "error"
+       }
     }
-  ]
+  ],
+  "settings": {
+    "customTables": ["custom_table"],
+    "customAlts": ["custom_alt"]
+  }
 }
