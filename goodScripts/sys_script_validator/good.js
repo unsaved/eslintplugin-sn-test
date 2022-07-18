@@ -1,4 +1,4 @@
-(function() {
+function validate() {
     "use strict";
-    console.info("all is well");
-})(value);
+    console.info("client log");
+}
