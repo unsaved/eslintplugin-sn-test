@@ -32,7 +32,7 @@
         "**/sys_ui_action/@(iso|noniso)_@(global|scoped)action/*.js"
       ]
     },{ // ES6 overrides
-      "files": [ "**/@(noniso|iso)/*.js" ],
+      "files": [ "**/@(noniso|iso)/*.js", "**/@(sys_ui_script|sys_script_validator)/*.js"],
       "rules": {
         "strict": ["error", "safe"],
         "prefer-arrow-callback": "error",

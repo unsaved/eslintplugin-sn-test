@@ -1,4 +1,5 @@
 function validate() {
     "use strict";
-    console.info("client log");
+    const msg = "client log";
+    console.info(msg);
 }
