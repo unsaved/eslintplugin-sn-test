@@ -40,7 +40,8 @@
         "no-useless-rename": "error",
         "no-var": "error",
         "prefer-template": "error"
-      },
+      }
+    }, {
       "files": [ "**/sys_ui_script/*.js" ],
       "rules": {
         "strict": ["error", "safe"],
