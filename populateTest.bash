@@ -51,16 +51,17 @@ TMPFILE="$TMPDIR/${PROGNAME#.*}.$$"
 trap 'rm -f "$TMPFILE"' EXIT
 [ -d goodScripts ] || Abort "Directory 'goodScripts' is missing"
 [ -d badScripts ] || Abort "Directory 'badScripts' is missing"
-find goodScripts badScripts -name '*.js' > "$TMPFILE" ||
+[ -d reallybadScripts ] || Abort "Directory 'badScripts' is missing"
+find goodScripts badScripts reallybadScripts -name '*.js' > "$TMPFILE" ||
 Abort 'find command failed'
 [ -n "$REPLACE_MODE" ] && rm -rf test/good test/bad
 while read SCRIPT_PATH; do
     GB=
     case "$SCRIPT_PATH" in
-        badScripts/*) GB=bad;;
-        goodScripts/*) GB=good;;
+        badScripts/*|goodScripts/*|reallybadScripts/*) ;;
         *) Abort "Unexpected SCRIPT_PATH prefix: $SCRIPT_PATH";;
     esac
+    GB="${SCRIPT_PATH%%Scripts*}"
     REBASED="test/$GB/${SCRIPT_PATH#*Scripts/}"
     TEST_PATH="${REBASED%.js}-test.js"
     [ -e "$TEST_PATH" ] && {

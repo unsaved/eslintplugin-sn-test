@@ -24,3 +24,5 @@ link (non-global) link feature, but this has side-effects since the intermediate
 at a shared location on your computer.
 Less invasive is to just manually wipe the subdirectory node_modules/@admc.com/eslint-plugin-sn/
 and replace it with a symlink (or copy) of the development eslint-plugin-sn project directory.
+Be aware that "npm update" will wipe the sym link and replace it with what is found from a
+regular module resolution.
