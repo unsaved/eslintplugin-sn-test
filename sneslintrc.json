@@ -27,8 +27,11 @@
   },
   "overrides": [
     {
+      "files": ["**/sys_ui_script/*/*.js"],
+      "rules": { "@admc.com/sn/no-uiscript-curlyref": "error" }
+    },{ // ES6 overrides
       "files": [
-        "**//@(global|scoped)/*.js",
+        "**/@(global|scoped)/*.js",
         "**/sys_ui_action/@(iso|noniso)_@(global|scoped)action/*.js"
       ]
     },{ // ES6 overrides

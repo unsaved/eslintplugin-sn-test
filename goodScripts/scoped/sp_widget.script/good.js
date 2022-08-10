@@ -1,0 +1,6 @@
+(function() {
+    if (input.datum) {
+        data.datum = input.datum;
+        gs.info("Set datum for client");
+    }
+})();
