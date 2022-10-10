@@ -1,3 +1,3 @@
 (function() {
-if (!gs.update()) throw new Error("update failed");
+if (!current.update()) throw new Error("update failed");
 })(previous, current);
