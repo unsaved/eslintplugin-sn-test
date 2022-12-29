@@ -6,7 +6,7 @@ const relTestPath = __filename.substring(process.cwd().length + 1);
 const path = require("path");
 const fs = require("fs");
 const ex =
-  /^test[/](good|bad|reallybad)[/](?:(\w+)[/])?([\w.]+[/]\w+)-test[.]js$/.exec(relTestPath);
+  /^test[/](good|bad|reallybad)[/](?:([\w-]+)[/])?([\w.-]+[/][\w-]+)-test[.]js$/.exec(relTestPath);
 if (!ex) throw new Error(`Bad test file path: ${relTestPath}`);
 let expectExitVal;
 switch (ex[1]) {

@@ -54,7 +54,7 @@ trap 'rm -f "$TMPFILE"' EXIT
 [ -d reallybadScripts ] || Abort "Directory 'badScripts' is missing"
 find goodScripts badScripts reallybadScripts -name '*.js' > "$TMPFILE" ||
 Abort 'find command failed'
-[ -n "$REPLACE_MODE" ] && rm -rf test/good test/bad
+[ -n "$REPLACE_MODE" ] && rm -rf test/good test/bad test/reallybad
 while read SCRIPT_PATH; do
     GB=
     case "$SCRIPT_PATH" in
