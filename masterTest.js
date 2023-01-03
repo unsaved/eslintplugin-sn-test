@@ -5,18 +5,21 @@ if (!__filename.startsWith(process.cwd() + "/"))  // eslint-disable-line prefer-
 const relTestPath = __filename.substring(process.cwd().length + 1);
 const path = require("path");
 const fs = require("fs");
-const ex =
-  /^test[/](good|bad|reallybad)[/](?:([\w-]+)[/])?([\w.-]+[/][\w-]+)-test[.]js$/.exec(relTestPath);
+const ex =  // eslint-disable-next-line max-len
+  /^test[/](good|bad1|bad2|badSys)[/](?:([\w-]+)[/])?([\w.-]+[/][\w-]+)-test[.]js$/.exec(relTestPath);
 if (!ex) throw new Error(`Bad test file path: ${relTestPath}`);
 let expectExitVal;
 switch (ex[1]) {
     case "good":
         expectExitVal = 0;
         break;
-    case "bad":
+    case "bad1":
         expectExitVal = 1;
         break;
-    case "reallybad":
+    case "bad2":
+        expectExitVal = 2;
+        break;
+    case "badSys":
         expectExitVal = 253;
         break;
 }

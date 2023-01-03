@@ -1,5 +1,6 @@
-(function() {
 "use strict";
+
+(function() {
 const dbl = v => v+v;
 let x = 3;
 x++;

@@ -50,15 +50,16 @@ Abort() {
 TMPFILE="$TMPDIR/${PROGNAME#.*}.$$"
 trap 'rm -f "$TMPFILE"' EXIT
 [ -d goodScripts ] || Abort "Directory 'goodScripts' is missing"
-[ -d badScripts ] || Abort "Directory 'badScripts' is missing"
-[ -d reallybadScripts ] || Abort "Directory 'badScripts' is missing"
-find goodScripts badScripts reallybadScripts -name '*.js' > "$TMPFILE" ||
+[ -d bad1Scripts ] || Abort "Directory 'bad1Scripts' is missing"
+[ -d bad2Scripts ] || Abort "Directory 'bad2Scripts' is missing"
+[ -d badSysScripts ] || Abort "Directory 'badScripts' is missing"
+find goodScripts bad1Scripts bad2Scripts badSysScripts -name '*.js' > "$TMPFILE" ||
 Abort 'find command failed'
-[ -n "$REPLACE_MODE" ] && rm -rf test/good test/bad test/reallybad
+[ -n "$REPLACE_MODE" ] && rm -rf test/good test/bad1 test/bad2 test/badSys
 while read SCRIPT_PATH; do
     GB=
     case "$SCRIPT_PATH" in
-        badScripts/*|goodScripts/*|reallybadScripts/*) ;;
+        bad1Scripts/*|bad2Scripts/*|goodScripts/*|badSysScripts/*) ;;
         *) Abort "Unexpected SCRIPT_PATH prefix: $SCRIPT_PATH";;
     esac
     GB="${SCRIPT_PATH%%Scripts*}"
