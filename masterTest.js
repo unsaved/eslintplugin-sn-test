@@ -1,12 +1,12 @@
 "use strict";
 /* global it */
-if (!__filename.startsWith(process.cwd() + "/"))  // eslint-disable-line prefer-template
+const path = require("path");
+if (!__filename.startsWith(process.cwd() + path.sep))  // eslint-disable-line prefer-template
     throw new Error("You must execute these tests from the package base directory");
 const relTestPath = __filename.substring(process.cwd().length + 1);
-const path = require("path");
 const fs = require("fs");
 const ex =  // eslint-disable-next-line max-len
-  /^test[/](good|bad1|bad2|badSys)[/](?:([\w-]+)[/])?([\w.-]+[/][\w-]+)-test[.]js$/.exec(relTestPath);
+  /^test[/\\](good|bad1|bad2|badSys)[/\\](?:([\w-]+)[/\\])?([\w.-]+[/\\][\w-]+)-test[.]js$/.exec(relTestPath);
 if (!ex) throw new Error(`Bad test file path: ${relTestPath}`);
 let expectExitVal;
 switch (ex[1]) {
