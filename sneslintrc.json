@@ -51,7 +51,7 @@
         "no-var": "error",
         "prefer-template": "error"
       }
-    }, {  // Overridding for ES12 IIFE scriptlets}
+    }, {  // Overriding for ES12 IIFE scriptlets}
       "files": [
         "**/@(sys_script|sys_ws_operation|sys_web_service|sys_processor|sys_script_email|sys_transform_map|sys_transform_script|sp_widget.script|sys_ui_page.processing_script)/scoped-es12/*.js",  // eslint-disable-line max-len
         "**/sys_ui_action/@(iso|noniso)_scoped-es12/*.js"
@@ -65,6 +65,9 @@
          "@admc.com/sn/log-global-2-args": "error",
          "@admc.com/sn/no-log-scoped": "error"
        }
+    }, { // Condition scriptlets
+      "files": [ "**/*.condition/*/*.js"],
+      "rules": { "strict": "off", "semi": "off" }
     }
   ],
   "settings": {
