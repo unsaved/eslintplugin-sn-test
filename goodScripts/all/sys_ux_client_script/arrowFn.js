@@ -1,5 +1,5 @@
 // Header comment
-(function({a, b}) {
+({a, b}) => {
     console.info(`Something about ${a} and ${b}`);
-})
+}
 /* Tail comment */
