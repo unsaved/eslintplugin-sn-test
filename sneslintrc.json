@@ -9,7 +9,7 @@
   "extends": ["plugin:@admc.com/sn/servicenow"],
 
   // Following are overrides which escalate warns to errors.
-  // Tests only work if the leve is error because we check only snLint/eslint return value,
+  // Tests only work if the level is error because we check only snLint/eslint return value,
   // not the stdout or stderr.
   "rules": {
     "no-implied-eval": "error",
@@ -31,7 +31,7 @@
       "rules": { "@admc.com/sn/no-uiscript-curlyref": "error" }
     }, { // ES6 overrides
       "files": [ "**/@(noniso|iso)/*.js",
-                 "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script)/all/*.js"],
+                 "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet)/all/*.js"],  // eslint-disable-line max-len
       "rules": {
         "strict": ["error", "function"],
         "prefer-arrow-callback": "error",
@@ -68,6 +68,9 @@
     }, { // Condition scriptlets
       "files": [ "**/*.condition/*/*.js"],
       "rules": { "strict": "off", "semi": "off" }
+    }, { // NE sys_ux scripts don't need and can't use "use strict"
+      "files": [ "**/sys_ux_*/*/*.js"],
+      "rules": { "strict": "off" }
     }
   ],
   "settings": {
