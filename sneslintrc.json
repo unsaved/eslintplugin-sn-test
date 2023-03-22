@@ -22,6 +22,7 @@
     "eqeqeq": "error",
     "semi": "error",
     "no-extra-parens": "error",
+    "no-eq-null": "error",
     "@admc.com/sn/prefer-array-iterator": "error",
     "@admc.com/sn/no-init-emptystring": "error"
   },
@@ -39,6 +40,8 @@
         "no-useless-rename": "error",
         "no-var": "error",
         "prefer-template": "error",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
         "@admc.com/sn/no-client-gr": "error"
       }
     }, {  // ES 12 overrides
@@ -49,6 +52,8 @@
         "object-shorthand": "error",
         "no-useless-rename": "error",
         "no-var": "error",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
         "prefer-template": "error"
       }
     }, {  // Overriding for ES12 IIFE scriptlets}
