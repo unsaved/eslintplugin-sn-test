@@ -1,4 +1,4 @@
-function($scope) {
+dummy = function($scope) {
     "use strict";
     const fName = "spclient/" + $scope.widget.id + ":" + $scope.$id;
 	console.warn("UPDATE02");
@@ -10,4 +10,4 @@ function($scope) {
 	console.info(fName + " options", this.options);
 	$scope.pneu = "new string";
 	console.info("this", this);
-}
+};

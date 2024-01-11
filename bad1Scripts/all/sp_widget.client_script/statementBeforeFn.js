@@ -1,3 +1,4 @@
+console.info("helo");
 function($scope) {
     "use strict";
     const fName = "spclient/" + $scope.widget.id + ":" + $scope.$id;

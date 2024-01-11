@@ -1,4 +1,4 @@
-function($scope) {
+function dummy($scope) {
     "use strict";
     const fName = "spclient/" + $scope.widget.id + ":" + $scope.$id;
 	console.warn("UPDATE02");
