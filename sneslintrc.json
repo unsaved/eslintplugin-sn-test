@@ -27,10 +27,7 @@
     "@admc.com/sn/no-init-emptystring": "error"
   },
   "overrides": [
-    {
-      "files": ["**/sys_ui_script/*/*.js"],
-      "rules": { "@admc.com/sn/no-uiscript-curlyref": "error" }
-    }, { // ES6 overrides
+    {  // ES6 overrides
       "files": [ "**/@(noniso|iso)/*.js",
                  "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet)/all/*.js"],  // eslint-disable-line max-len
       "rules": {
@@ -56,6 +53,15 @@
         "prefer-spread": "error",
         "prefer-template": "error"
       }
+    }, {
+        // Reverting eslint-plugin-sn exceptions back, because we overrode them generally above
+        // when raising warnings to errors.
+        "files":
+          ["**/@(sys_ui_script|sp_widget.script|sp_widget.client_script|sp_widget.link)/*/*.js"],
+        "rules": {
+            "prefer-template": "off",
+            "no-template-curly-in-string": "off"
+        }
     }, {  // Overriding for ES12 IIFE scriptlets}
       "files": [
         "**/@(sys_script|sys_ws_operation|sys_web_service|sys_processor|sys_script_email|sys_transform_map|sys_transform_script|sp_widget.script|sys_ui_page.processing_script)/scoped-es12/*.js",  // eslint-disable-line max-len
