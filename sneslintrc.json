@@ -29,7 +29,7 @@
   "overrides": [
     {  // ES6 overrides
       "files": [ "**/@(noniso|iso)/*.js",
-                 "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet)/all/*.js"],  // eslint-disable-line max-len
+                 "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet|sp_widget.link|sys_ui_context_menu)/all/*.js"],  // eslint-disable-line max-len
       "rules": {
         "strict": ["error", "function"],
         "prefer-arrow-callback": "error",
@@ -57,7 +57,7 @@
         // Reverting eslint-plugin-sn exceptions back, because we overrode them generally above
         // when raising warnings to errors.
         "files":
-          ["**/@(sys_ui_script|sp_widget.script|sp_widget.client_script|sp_widget.link)/*/*.js"],
+          ["**/@(sys_ui_script|sp_widget.script|sp_widget.client_script|sp_widget.link|sp_widget.link|sys_ui_context_menu)/*/*.js"],
         "rules": {
             "prefer-template": "off",
             "no-template-curly-in-string": "off"
