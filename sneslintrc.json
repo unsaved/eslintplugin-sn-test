@@ -24,7 +24,8 @@
     "no-extra-parens": "error",
     "no-eq-null": "error",
     "@admc.com/sn/prefer-array-iterator": "error",
-    "@admc.com/sn/no-init-emptystring": "error"
+    "@admc.com/sn/no-init-emptystring": "error",
+    "@admc.com/sn/no-gr-count-iterate": "error"
   },
   "overrides": [
     {  // ES6 overrides
