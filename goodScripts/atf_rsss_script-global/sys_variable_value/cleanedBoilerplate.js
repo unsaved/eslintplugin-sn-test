@@ -1,3 +1,4 @@
 (function(outputs, steps, params, stepResult, assertEqual) {
-    "use strict";
+    gs.log("Input params: " + outputs
+        + " / " + steps + " / " + params + " / " + stepResult + " / " + assertEqual, "src");
 })(outputs, steps, params, stepResult, assertEqual);

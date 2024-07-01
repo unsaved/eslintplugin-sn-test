@@ -1,7 +1,7 @@
 function generateDescription() {
     "use strict";
     // the global variable 'step' represents the current glide record
-    var description = "";
+    var description = "X";
 	return description;
 }
  generateDescription();

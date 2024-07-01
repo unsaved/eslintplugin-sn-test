@@ -1,3 +1,4 @@
 (function executeStep(inputs, outputs, stepResult, timeout) {
-    "use strict";
+    gs.log("Input params: " + inputs + " / " + outputs + " / " + stepResult + " / " + timeout,
+      "testing");
 }(inputs, outputs, stepResult, timeout));

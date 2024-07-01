@@ -1,8 +1,6 @@
+"use strict";
 (function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
-    // Have to satisfy "use strict" or would have to complicate eslintplugin-sn-test design to
-    // allow arbitrarily-specified number of failures, or at least add support for 3 failures.
-    // Doing this instead of eslint-disable since that notation would conflict with wrapping:
-    "use strict";
 
 	// Implement email action here
+    logger.info(`Input params (${current}) (${event}) (${email}) (${classifier})`);
 })(current, event, email, logger, classifier);

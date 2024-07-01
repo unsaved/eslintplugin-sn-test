@@ -16,5 +16,8 @@ ${expect}
 ${fail}
 ${pending}
 ${spyOn}
++ input Params:
+${steps}
+${params}
 `);
 })(outputs, steps, params, stepResult, assertEqual);

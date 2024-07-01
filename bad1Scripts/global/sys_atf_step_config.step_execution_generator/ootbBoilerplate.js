@@ -50,8 +50,6 @@
 //      stepResult.setFailed();
 //
 (function executeStep(inputs, outputs, stepResult, timeout) {
-    // Have to satisfy "use strict" or would have to complicate eslintplugin-sn-test design to
-    // allow arbitrarily-specified number of failures, or at least add support for 3 failures.
-    // Doing this instead of eslint-disable notation since that would conflict with wrapping:
-    "use strict";
+    gs.log("Input params: " + inputs + " / " + outputs + " / " + stepResult + " / " + timeout,
+      "src");
 }(inputs, outputs, stepResult, timeout));

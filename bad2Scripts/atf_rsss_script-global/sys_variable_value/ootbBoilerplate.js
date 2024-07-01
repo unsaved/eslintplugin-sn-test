@@ -82,11 +82,9 @@
 //      assertEqual(testAssertion); // throws Error, logs message to test step output
 //
 (function(outputs, steps, params, stepResult, assertEqual) {
-    // Have to satisfy "use strict" or would have to complicate eslintplugin-sn-test design to
-    // allow arbitrarily-specified number of failures, or at least add support for 3 failures.
-    // Doing this instead of eslint-disable notation since that would conflict with wrapping:
-    "use strict";
     // add test script here
+    gs.log("Input params: " + outputs + " / " + steps + " / " + params + " / " + stepResult
+      + " / " + assertEqual, "src");
 
 })(outputs, steps, params, stepResult, assertEqual);
 // uncomment the next line to execute this script as a jasmine test
