@@ -1,3 +1,3 @@
 (function() {
-    gs.info("scopedl og");
-})(source, target, isUpdate, map, log);
+    gs.info("scoped log");
+})(source, target, map, log, action==="update");
