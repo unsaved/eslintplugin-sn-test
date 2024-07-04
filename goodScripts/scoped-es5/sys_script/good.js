@@ -1,4 +1,5 @@
 (function() {
+"use strict";
 // Test availability of scoped vars from the different component lists:
 gs.info(new sn_ws_err.NotAcceptableError("fake err"));  // coreServerObjects.txt
 gs.info(Object.keys(new sn_codesearch.CodeSearch()).length);  // SIScopes
