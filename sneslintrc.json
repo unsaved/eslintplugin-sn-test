@@ -58,10 +58,6 @@
       "files": [ "**/catalog_script_client/*/*.js" ],
       "rules": { "@admc.com/sn/no-backtick-curlyref": "error" }
     }, {  // Same reason as the warn-to-error overides above, but rule applies only to some scripts.
-      "files": [
-          "**/@(global|iso_global|noniso_global)/*.js", "**/sys_variable_value/s*_global/*.js" ],
-      "rules": { "vars-on-top": "error" }
-    }, {  // Same reason as the warn-to-error overides above, but rule applies only to some scripts.
       "files": [ "**/global/*.js", "**/sys_variable_value/s*_global/*.js" ],
       "rules": { "@admc.com/sn/no-log-console": "error" }
     }, {
