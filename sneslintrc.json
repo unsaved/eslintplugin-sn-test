@@ -67,6 +67,15 @@
           ["**/@(sys_ui_script|sp_widget.script|sp_widget.client_script|sp_widget.link|sys_ui_context_menu)/*/*.js"],
         "rules": { "no-template-curly-in-string": "off" }
     }, {
+        "files": ["**/sys_ux_data_broker_scriptlet/all/*.js"],
+        "rules": {
+            "@admc.com/sn/single-fn": ["error", { "table": "sys_ux_data_broker_scriptlet" }],
+            "prefer-template": "off",
+            "@admc.com/sn/no-toplvl-arrow-fn": "error",
+            "@admc.com/sn/no-backticks": "error",
+            "strict": "off"
+        }
+    }, {
         "files":
           ["**/@(sys_ui_script|sp_widget.script|sp_widget.client_script|sp_widget.link|sys_ui_context_menu|sys_script_validator|catalog_script_client)/*/*.js"],
         "rules": { "prefer-template": "off" }
