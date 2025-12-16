@@ -1,4 +1,5 @@
 (function() {
     "use strict";
-    return `I am ${gs.getUserName()}`;
+    let v = gs.getUserName;
+    return `I am ${v}`;
 })();
