@@ -28,7 +28,15 @@
     "@admc.com/sn/no-gr-count-iterate": "error"
   },
   "overrides": [
-    {  // ES6 overrides
+    {  // JS Level checks.  Not needed for end user linting.
+      "files": [ "**/scoped-es12/*.js", "global-es12/*.js",
+                 "**/sys_variable_value/s*_scoped-es12/*.js" ],
+      "rules": { "@admc.com/sn/supports-let": "error" }
+    }, {  // JS Level checks.  Not needed for end user linting.
+      "files": ["**/@(ecc_agent_script|ecc_agent_script_include|sa_pattern)/all/*.js",
+                "**/global/*.js"],
+      "rules": { "@admc.com/sn/supports-let": ["error", "invert"] }
+    }, {  // ES6 overrides
       "files": [ "**/@(noniso|iso)/*.js",
                  "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet|sp_widget.link|sys_ui_context_menu)/all/*.js"],  // eslint-disable-line max-len
       "rules": {
@@ -43,7 +51,8 @@
         "@admc.com/sn/no-client-gr": "error"
       }
     }, {  // ES 12 overrides
-      "files": [ "**/scoped-es12/*.js", "**/sys_variable_value/s*_scoped-es12/*.js" ],
+      "files": [ "**/scoped-es12/*.js", "**/global-es12/*.js",
+                 "**/sys_variable_value/s*_scoped-es12/*.js" ],
       "rules": {
         "strict": ["error", "global"],
         "prefer-arrow-callback": "error",
@@ -58,7 +67,7 @@
       "files": [ "**/catalog_script_client/*/*.js" ],
       "rules": { "@admc.com/sn/no-backtick-curlyref": "error" }
     }, {  // Same reason as the warn-to-error overides above, but rule applies only to some scripts.
-      "files": [ "**/global/*.js", "**/sys_variable_value/s*_global/*.js" ],
+      "files": [ "**/global/*.js", "**/global-es12/*.js", "**/sys_variable_value/s*_global/*.js" ],
       "rules": { "@admc.com/sn/no-log-console": "error" }
     }, {
         // Reverting eslint-plugin-sn exceptions back, because we overrode them generally above

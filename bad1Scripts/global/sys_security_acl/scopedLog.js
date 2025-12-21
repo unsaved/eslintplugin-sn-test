@@ -1,1 +1,1 @@
-gs.info("scoped log");
+gs.info("message");
