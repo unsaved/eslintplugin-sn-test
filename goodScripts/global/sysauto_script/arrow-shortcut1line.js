@@ -1,2 +1,2 @@
-// eslint-disable-next-line no-unused-vars
 const afn = c => "one".includes(c);
+gs.log(afn,"logsrc");
