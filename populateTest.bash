@@ -49,21 +49,21 @@ Abort() {
 [ -n "$TMPDIR" ] || TMPDIR=/tmp
 TMPFILE="$TMPDIR/${PROGNAME#.*}.$$"
 trap 'rm -f "$TMPFILE"' EXIT
-[ -d goodScripts ] || Abort "Directory 'goodScripts' is missing"
-[ -d bad1Scripts ] || Abort "Directory 'bad1Scripts' is missing"
-[ -d bad2Scripts ] || Abort "Directory 'bad2Scripts' is missing"
-[ -d badSysScripts ] || Abort "Directory 'badScripts' is missing"
-find goodScripts bad1Scripts bad2Scripts badSysScripts -name '*.js' > "$TMPFILE" ||
+[ -d 0scripts ] || Abort "Directory '0scripts' is missing"
+[ -d 1scripts ] || Abort "Directory '1scripts' is missing"
+[ -d 2scripts ] || Abort "Directory '2scripts' is missing"
+[ -d 254scripts ] || Abort "Directory '254scripts' is missing"
+find [0-9]scripts [0-9][0-9][0-9]scripts -name '*.js' > "$TMPFILE" ||
 Abort 'find command failed'
-[ -n "$REPLACE_MODE" ] && rm -rf test/good test/bad1 test/bad2 test/badSys
+[ -n "$REPLACE_MODE" ] && rm -rf test/[012] test/[0-9][0-9][0-9]
 while read SCRIPT_PATH; do
-    GB=
+    RV=
     case "$SCRIPT_PATH" in
-        bad1Scripts/*|bad2Scripts/*|goodScripts/*|badSysScripts/*) ;;
+        [0-9]scripts/*|[0-9][0-9][0-9]scripts/*) ;;
         *) Abort "Unexpected SCRIPT_PATH prefix: $SCRIPT_PATH";;
     esac
-    GB="${SCRIPT_PATH%%Scripts*}"
-    REBASED="test/$GB/${SCRIPT_PATH#*Scripts/}"
+    RV="${SCRIPT_PATH%%scripts*}"
+    REBASED="test/$RV/${SCRIPT_PATH#*scripts/}"
     TEST_PATH="${REBASED%.js}-test.js"
     [ -e "$TEST_PATH" ] && {
         [ -f "$TEST_PATH" ] || Abort "Existing filesystem node not a file: $TEST_PATH"
