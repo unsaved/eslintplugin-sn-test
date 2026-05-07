@@ -1,3 +1,3 @@
 var v = "initial";
 v += "suffix";
-gs.log(v, "src");
+gs.log(v, "logSrc");

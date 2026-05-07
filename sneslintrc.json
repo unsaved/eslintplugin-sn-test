@@ -37,8 +37,11 @@
                 "**/global/*.js"],
       "rules": { "@admc.com/sn/supports-let": ["error", "invert"] }
     }, {  // ES6 overrides
-      "files": [ "**/@(noniso|iso)/*.js",
-                 "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet|sp_widget.link|sys_ui_context_menu)/all/*.js"],  // eslint-disable-line max-len
+      "files": [
+        "**/@(sys_script_client|catalog_script_client|expert_script_client|sys_ui_action.script|sys_ui_policy.script_true|sys_ui_policy.script_false|catalog_ui_policy.script_true|catalog_ui_policy.script_false)/@(noniso|iso)/*.js",
+        "**/sys_ui_action.script/@(noniso|iso)_global-es12/*.js",
+        "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sp_widget.link|sys_ui_page.client_script|sys_ui_action.client_script_v2|sys_ux_client_script|sys_ux_client_script_include|sys_ux_data_broker_scriptlet|sys_ui_context_menu)/all/*.js"
+      ],
       "rules": {
         "prefer-arrow-callback": "error",
         "object-shorthand": "error",

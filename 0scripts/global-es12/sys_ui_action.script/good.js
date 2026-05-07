@@ -1,3 +1,3 @@
-var v = "initial";
+let v = "initial";
 v += "suffix";
 gs.log(v, "src");
