@@ -1,5 +1,4 @@
 ((steps, params) => {
-    "use strict";
     gs.info(`Provided functions:
 ${jasmine}
 ${describe}

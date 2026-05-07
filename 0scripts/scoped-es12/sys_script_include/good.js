@@ -1,4 +1,3 @@
-"use strict";
 
 const dbl = v => v+v;
 let x = 3;

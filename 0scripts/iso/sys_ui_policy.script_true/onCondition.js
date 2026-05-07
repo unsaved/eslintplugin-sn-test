@@ -1,1 +1,1 @@
-function onCondition() { "use strict"; console.info("Running fn"); }
+function onCondition() { console.info("Running fn"); }

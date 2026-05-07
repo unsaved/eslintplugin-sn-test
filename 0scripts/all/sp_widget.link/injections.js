@@ -1,5 +1,4 @@
 () => {
-    "use strict";
     const $document = $injector.get("$document");
     const $interval = $injector.get("$interval");
     const $location = $injector.get("$location");

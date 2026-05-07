@@ -1,5 +1,4 @@
 (scope) => {
-    "use strict";
     const fName = "splink/" + scope.widget.id + ":" + scope.$id;
 	console.warn("UPDATE02");
     console.warn("scope", scope);

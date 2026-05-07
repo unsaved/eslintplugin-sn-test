@@ -1,5 +1,4 @@
 function cancel() {
-    "use strict";
     const c = gel('cancelled');
     c.value = "true";
     GlideDialogWindow.get().destroy();
@@ -7,6 +6,5 @@ function cancel() {
 }
 
 function ok() {
-    "use strict";
     return true;
 }

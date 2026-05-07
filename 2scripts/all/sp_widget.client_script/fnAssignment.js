@@ -1,7 +1,6 @@
 _unused = function($scope) {
     /* I had to put this script under bad2Scripts instead of bad1Scripts to accommodate an
      * ESLint bug where varsIgnorePatterns are sometimes not honored, including for "_unused". */
-    "use strict";
     /* global _unused:writable */
     const fName = "spclient/" + $scope.widget.id + ":" + $scope.$id;
 	console.warn("UPDATE02");

@@ -40,7 +40,6 @@
       "files": [ "**/@(noniso|iso)/*.js",
                  "**/@(sys_ui_script|sys_script_validator|sp_widget.client_script|sys_ux_data_broker_scriptlet|sp_widget.link|sys_ui_context_menu)/all/*.js"],  // eslint-disable-line max-len
       "rules": {
-        "strict": ["error", "function"],
         "prefer-arrow-callback": "error",
         "object-shorthand": "error",
         "no-useless-rename": "error",
@@ -54,7 +53,6 @@
       "files": [ "**/scoped-es12/*.js", "**/global-es12/*.js",
                  "**/sys_variable_value/s*_scoped-es12/*.js" ],
       "rules": {
-        "strict": ["error", "global"],
         "prefer-arrow-callback": "error",
         "object-shorthand": "error",
         "no-useless-rename": "error",
@@ -79,8 +77,7 @@
         "files": ["**/sys_ux_data_broker_scriptlet/all/*.js"],
         "rules": {
             "@admc.com/sn/single-fn": ["error", { "table": "sys_ux_data_broker_scriptlet" }],
-            "@admc.com/sn/no-toplvl-arrow-fn": "error",
-            "strict": "off"
+            "@admc.com/sn/no-toplvl-arrow-fn": "error"
         }
     }, {
         "files":
@@ -91,8 +88,7 @@
         "**/@(sys_script|sys_ws_operation|sys_web_service|sys_processor|sys_script_email|sys_transform_map|sys_transform_script|sp_widget.script|sys_ui_page.processing_script|sysevent_in_email_action|sys_atf_step_config.step_execution_generator)/scoped-es*/*.js",  // eslint-disable-line max-len
         "**/sys_ui_action.script/@(iso|noniso)_scoped-es*/*.js",
         "**/sys_variable_value/sss_scoped-es*/*.js"
-      ],
-      "rules": { "strict": ["error", "function"] }
+      ]
     }, { // Custom table and scope
       "files": [ "**/custom_table/custom_alt/*.js" ],
       "env": {"@admc.com/sn/sn_server_global": true },
@@ -103,10 +99,9 @@
        }
     }, { // Condition scriptlets
       "files": [ "**/*.condition/*/*.js"],
-      "rules": { "strict": "off", "semi": "off" }
-    }, { // NE sys_ux scripts don't need and can't use "use strict"
-      "files": [ "**/sys_ux_*/*/*.js"],
-      "rules": { "strict": "off" }
+      "rules": { "semi": "off" }
+    }, {
+      "files": [ "**/sys_ux_*/*/*.js"]
     }
   ],
   "settings": {

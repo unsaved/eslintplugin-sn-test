@@ -1,6 +1,5 @@
 console.info("helo");
 function($scope) {
-    "use strict";
     const fName = "spclient/" + $scope.widget.id + ":" + $scope.$id;
 	console.warn("UPDATE02");
     console.warn("$scope", $scope);
