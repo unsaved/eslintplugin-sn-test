@@ -46,7 +46,6 @@
         "prefer-arrow-callback": "error",
         "object-shorthand": "error",
         "no-useless-rename": "error",
-        "no-var": "error",
         "prefer-template": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
@@ -59,7 +58,6 @@
         "prefer-arrow-callback": "error",
         "object-shorthand": "error",
         "no-useless-rename": "error",
-        "no-var": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error"
